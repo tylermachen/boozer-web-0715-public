@@ -3,4 +3,3 @@
 require_relative '../config/environment'
 
 puts "Welcome to Boozer. Here's a few of our drinks"
-HomeController.run
