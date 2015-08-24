@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Ingredient</title>
+</head>
+<body>
+  <h1><%= ingredient.name %></h1>
+  <h2>You can find this ingredient in these drinks</h2>
+  <ul>
+    <% ingredient.cocktails.each do |cocktail| %>
+      <li><%= cocktail.name %></li>
+    <% end %>
+  </ul>
+</body>
+</html>
