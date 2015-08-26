@@ -1,8 +1,12 @@
-class CocktailsController
-  def index
-    cocktails = Cocktail.all
-    template = File.read('app/views/cocktails/index.html.erb')
-    result = ERB.new(template).result(binding)
-    Rack::Response.new(result)
+class CocktailsController < Sinatra::Base
+  set :root, "#{settings.root}/.."
+  get '/cocktails' do
+    @cocktails = Cocktail.all
+    erb :"cocktails/index"
+  end
+
+  get 'cocktails/:id' do
+    @cocktail = Cocktail.find(params[:id])
+    erb :"cocktails/show"
   end
 end

@@ -1,0 +1,6 @@
+<h1>Drinks</h1>
+<ul>
+  <% @cocktails.each do |cocktail| %>
+    <li><<a href="/cocktails/<%= cocktail.id %>"><%= cocktail.name %></a></li>
+  <% end %>
+</ul>

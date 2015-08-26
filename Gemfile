@@ -6,3 +6,4 @@ gem "activerecord", require: 'active_record'
 gem "pry"
 gem "rack"
 gem "thin"
+gem "sinatra", require: "sinatra/base"
